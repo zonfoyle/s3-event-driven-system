@@ -39,17 +39,6 @@ This system performs the following workflow:
    - On failure → the message is not deleted, allowing SQS to retry it.
 6. After multiple failed attempts, the message is moved to a Dead Letter Queue (DLQ).
 
-### 🔍 How It Works
-
-1. A file is uploaded to the S3 bucket.
-2. S3 automatically generates an event notification.
-3. The event is sent to an SQS queue.
-4. A Python worker reads messages from the queue.
-5. The worker processes the file:
-   - On success → the message is deleted and a success notification is sent via SNS.
-   - On failure → the message is not deleted, allowing SQS to retry it.
-6. After multiple failed attempts, the message is moved to a Dead Letter Queue (DLQ).
-
 S3 Bucket  
 ↓  
 S3 Event Notification  
