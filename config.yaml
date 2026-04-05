@@ -1,0 +1,13 @@
+aws_region: us-east-1
+
+s3:
+  bucket_name: zonique-event-bucket-83921
+  file_to_upload: sample.txt
+
+sqs:
+  queue_name: zonique-event-queue-v2
+  dlq_name: zonique-event-dlq-v2
+  max_receive_count: 3
+
+sns:
+  topic_name: zonique-event-topic
