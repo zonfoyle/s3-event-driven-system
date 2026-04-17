@@ -36,9 +36,7 @@ Dead Letter Queue (DLQ)
 
 You can also include your architecture diagram here:
 
-```markdown
 ![Event-Driven Architecture](architecture.png)
-```
 
 ## Design Decisions
 
